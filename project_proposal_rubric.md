@@ -21,40 +21,51 @@ DELETE /remove - deletes user and their data from database.
 
 User financial data model:
 
-userID: number //(unique number ID of user)
-Age: number //(current age of user)
-MNI: number //(monthly net income)
-MS: number //(monthly spending)
-TA: number //(total assets)
-ER: number //(expected return on investments)
-EI: number //(expected inflation)
-EEA: number //(expected entitlements age)
-LE: number //(life expectancy)
+- userID: number //(unique number ID of user)
+- Age: number //(current age of user)
+- MNI: number //(monthly net income)
+- MS: number //(monthly spending)
+- TA: number //(total assets)
+- ER: number //(expected return on investments)
+- EI: number //(expected inflation)
+- EEA: number //(expected entitlements age)
+- LE: number //(life expectancy)
 
 User credentials data model:
 
-userName: String
-password: String
-userID: number //(unique number ID of user)
+- userName: String
+- password: String
+- userID: number //(unique number ID of user)
 
 SP500 data model:
 
-Date: datetime
-value: number
-YoY_return: number
+- Date: datetime
+- value: number
+- YoY_return: number
 
 Provided by: https://rapidapi.com/apidojo/api/yahoo-finance1
 
-
 ## User Stories
 
-- A user will sign up by creating a username and password.
-- The user will then we allowed to enter their financial information into the input fields and generate a financial runway for themselves.
+- A user will sign up by creating a username and password. Financial data will also auto-populate to default values.
+
+POST /create
+
+- The user will then we allowed to enter their financial information into the input fields and generate a financial runway for themselves. Any changes from the default data results in changes to the database.
+
 - Once the runway is created, they will be able to play around with it using the sliders functionality to see different outcomes based on changes
-in income, spending, etc.
-- when they leave and return, their information will repopulate once they log in again.
-- User will be able to update their existing data
+in income, spending, etc
+
+PUT /update - updates existing user data in database with newly inputted data
+
+
+- when they leave and return, their information will repopulate once they log in again
+
+GET GET /user:id
+
 - User will be able to delete data
+
+DELETE /remove
 
 #### MVP Goals
 
