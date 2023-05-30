@@ -1,5 +1,5 @@
 # Project Proposal
-An app to help people empower themselves!
+An app to help people financially empower themselves.
 
 ## Project name and description
 Runway App, version 2!
