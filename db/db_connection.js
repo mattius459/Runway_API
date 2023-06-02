@@ -10,9 +10,10 @@ let mongooseConfig = {
 
 //Send data to db
 const localMongoURI = "mongodb://localhost/";
-const remoteMongoURI = "mongodb+srv://mattahlborg:3Nn0B7JBPJdrnHPX@cluster0.imd58mm.mongodb.net/?retryWrites=true&w=majority"
+const MONGO_URI = process.env.MONGO_URI;
+
 mongoose
-  .connect(remoteMongoURI, mongooseConfig)
+  .connect(MONGO_URI, mongooseConfig)
   .then(instance =>
     console.log(`Connected to db: ${instance.connections[0].name}`)
   )
