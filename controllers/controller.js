@@ -76,12 +76,13 @@ const logIn = async (req, res) => {
       EEA: userFinancialsObject[0].EEA,
       LE: userFinancialsObject[0].LE,
       _id: userObject[0].userFinancialData
-
     };
     res.send(responseObject)
-
   } else {
-    res.send("Log in unsuccessful. Try again")
+    const responseObject = {
+      message: "Log in unsuccessful... try again",
+    }
+      res.send(responseObject)
     }
   }
 }
@@ -115,8 +116,6 @@ const deleteUser = async (req, res) => {
   }
   res.send(responseObject)
 }
-
-
 
 //export default create;
 export { create, logIn, update, deleteUser}

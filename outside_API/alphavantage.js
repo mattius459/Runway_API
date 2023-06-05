@@ -60,10 +60,6 @@ const averageReturn = annualReturns.reduce((sum, annualReturns) => sum + annualR
 
 console.log('Average Return :', averageReturn);
 
-
-
-
-
 const seedDatabase = async () => {
     try {
       // Connect to the MongoDB database
