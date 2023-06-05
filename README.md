@@ -32,6 +32,13 @@ My app is called "Runway". It is an app for those aspiring to get a better hold 
 - Get live version on netlify and heroku
 - Expected return default value will be the average of returns over history as pulled from an outside API.
 
+### Routes
+
+/create -creates new user
+/logIn - logs in existing user
+/update - updates user financial data
+/deleteUser - deletes user data from DB
+
 ### Getting Started
 
 - Go to https://silly-centaur-bb26e0.netlify.app/index.html
