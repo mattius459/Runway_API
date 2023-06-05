@@ -43,7 +43,7 @@ SP500 data model:
 - value: number
 - YoY_return: number
 
-Provided by: https://rapidapi.com/apidojo/api/yahoo-finance1
+Provided by: https://www.alphavantage.co/documentation/
 
 ## User Stories
 

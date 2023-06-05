@@ -90,5 +90,4 @@ const seedDatabase = async () => {
   seedDatabase();
 
 
-
   //Send average return to expected return on frontend
