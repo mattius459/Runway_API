@@ -9,7 +9,7 @@ let mongooseConfig = {
 }
 
 //Send data to db
-const localMongoURI = "mongodb://localhost/";
+//const localMongoURI = "mongodb://localhost/";
 const MONGO_URI = process.env.MONGO_URI;
 
 mongoose
