@@ -13,7 +13,7 @@ const localMongoURI = "mongodb://localhost/";
 const MONGO_URI = process.env.MONGO_URI;
 
 mongoose
-  .connect(MONGO_URI, mongooseConfig)
+  .connect(localMongoURI, mongooseConfig)
   .then(instance =>
     console.log(`Connected to db: ${instance.connections[0].name}`)
   )
